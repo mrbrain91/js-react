@@ -13,7 +13,7 @@ console.log(--decr);
 
 console.log(10 % 4);
 
-console.log(2 * 4 != '8');
+// console.log(2 * 4 != '8');
 
 
 const isChecked = true,
