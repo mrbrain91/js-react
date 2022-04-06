@@ -1,26 +1,16 @@
-// "use strict";
+/* Задание на урок:
 
-const str = "teSt";
-const arr = [1, 2, 4];
-// console.log(str.toUpperCase());
-console.log(str.toLocaleLowerCase());
+1) Первую часть задания повторить по уроку
 
-const fruit = "Some fruit";
+2) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции
+false - выводит в консоль главный объект программы
 
-console.log(fruit.indexOf("q"));
+3) Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос 
+"Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
+genres
 
-const logg = "fazliddin";
+P.S. Функции вызывать не обязательно*/
 
-console.log(fruit.slice(6, 11));
+'use strict';
 
-
-console.log(fruit.substring(6, 11));
-
-
-const num = 12.2;
-
-console.log(Math.round(num));
-
-const test = "12.2px";
-// console.log(parseInt(test));
-console.log(parseFloat(test));
+// Код возьмите из предыдущего домашнего задания
