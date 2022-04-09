@@ -1,45 +1,54 @@
 'use strict';
 
-const options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    color: {
-        border: 'black',
-        bg: 'red'
-    },
-    makeTest: function() {
-        console.log("Test");
-    }
-};
+const arr = [12, 23, 13, 6, 8];
 
-options.makeTest();
+console.log(arr.sort(compareNum));
 
-const { border, bg } = options.color;
+function compareNum(a, b) {
+    return a - b;
+}
 
-console.log(border);
+// arr['99'] = 0;
 
-// console.log(Object.keys(options).length);
+// console.log(arr.length);
 
-// console.log(options.name);
+// console.log(arr);
+
+// arr.forEach(function(item, i, arr){
+//     console.log(`${i}: ${item} vnutri ${arr}`);
+// });
 
 
-// delete options.name;
 
-// console.log(options);
-// let counter = 0;
 
-// for (let key in options) {
+// arr.pop();
 
-//     if (typeof(options[key]) === "object") {
-//         for (let i in options[key]) {
-//             console.log(`svoystvo ${i} imeet znacheniya ${options[key][i]}`);
-//         }
-//     } else {
-//         console.log(`svoystvo ${key} imeet znacheniya ${options[key]}`);
-//         counter++;
-//     }
+// arr.push(10);
+
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
 // }
 
+// for (let value of arr) {
+//     console.log(value);
+// }
 
-// console.log(counter);
+// const str = prompt(", ");
+
+// const products = str.split(", ");
+
+// products.sort();
+
+// console.log(products);
+
+// console.log(products);
+
+// const arr = [1, 2, 3, 4];
+
+
+
+// const str = arr.join(" - ");
+
+// console.log(str);
