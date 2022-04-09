@@ -1,54 +1,104 @@
 'use strict';
 
-const arr = [12, 23, 13, 6, 8];
+// let a = 5,
+//     b = a;
 
-console.log(arr.sort(compareNum));
+// b = b + 5;
 
-function compareNum(a, b) {
-    return a - b;
+// console.log(b);
+// console.log(a);
+
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
+
+// const copy = obj;
+
+// copy.a = 10;
+
+// console.log(obj);
+// console.log(copy);
+
+// const obj = {
+//     a: 5,
+//     b: 7,
+//     c: {
+//         x: 10,
+//         y: 1
+//     }
+// };
+
+// function copy(mainObj) {
+//     let copyObj = {};
+
+//     let key;
+//     for (key in mainObj) {
+
+//         copyObj[key] = mainObj[key];
+//     }
+
+//     return copyObj;
+// }
+
+// const newCopy = copy(obj);
+
+// newCopy.a = 10;
+// console.log(obj);
+// console.log(newCopy);
+
+// const number1 = {
+//     a: 6,
+//     b: 8,
+//     c: {
+//         x: 89,
+//         y: 12
+//     }
+// };
+
+// const number2 = {
+//     a: 99,
+//     h: 90
+// };
+
+// const clone = Object.assign({}, number2);
+
+// clone.a = 100;
+// clone.d = 32434;
+
+// console.log(number2);
+// console.log(clone);
+
+
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();
+
+// newArray[1] = 'asdas';
+
+// console.log(oldArray);
+// console.log(newArray);
+
+// const math = ['logarifm', 'kasr', 'interval'],
+//       eng = ['sintance', 'words', 'grammal'],
+//       all = [...math, ...eng, 'newpred'];
+
+// console.log(all);
+
+function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
 }
 
-// arr['99'] = 0;
+const num = [2, 5, 7];
 
-// console.log(arr.length);
+log(...num);
 
-// console.log(arr);
+const array = ['a', 'b'];
 
-// arr.forEach(function(item, i, arr){
-//     console.log(`${i}: ${item} vnutri ${arr}`);
-// });
+const newAarray = [...array];
 
 
 
-
-// arr.pop();
-
-// arr.push(10);
-
-// console.log(arr);
-
-// for (let i = 0; i < arr.length; i++) {
-//     console.log(arr[i]);
-// }
-
-// for (let value of arr) {
-//     console.log(value);
-// }
-
-// const str = prompt(", ");
-
-// const products = str.split(", ");
-
-// products.sort();
-
-// console.log(products);
-
-// console.log(products);
-
-// const arr = [1, 2, 3, 4];
-
-
-
-// const str = arr.join(" - ");
-
-// console.log(str);
+console.log(newAarray);
+console.log(array);
