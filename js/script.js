@@ -25,3 +25,16 @@ circles[0].style.backgroundColor = 'red';
 hearts.forEach(item => {
     item.style.backgroundColor = 'green';
 });
+
+const div = document.createElement('div');
+
+
+// const text = document.createTextNode('mendirman usha');
+
+// console.log(div);
+
+
+div.classList.add('black');
+
+document.body.append(div);
+
