@@ -24,3 +24,36 @@ const movieDB = {
     ]
 };
 
+const adv = document.getElementsByClassName("promo__adv"),
+    genre = document.querySelectorAll(".promo__genre"),
+    divGenre = document.createElement("div"),
+    bg = document.querySelector(".promo__bg");
+
+
+
+// 1я задача
+
+// 1-usul
+// const adv = document.querySelectorAll(".promo__adv");
+//2 usul
+adv[0].remove();
+
+//2я задача
+
+divGenre.innerHTML = "<div class='promo__genre'>ДРАМА</div>";
+genre[0].replaceWith(divGenre);
+
+// 3я задача
+
+bg.style.cssText = 'background:none; background: url(../../img/bg.jpg) center center/cover no-repeat;';
+
+
+
+
+
+
+
+
+
+
+// 2я задача
