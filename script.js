@@ -1,45 +1,60 @@
-console.log(NaN || 2 || undefined); //
+"use strict";
 
-console.log(NaN && 2 && undefined); // javob: NaN; VA operatori agar bitta false bolsa birinchi falseni qaytaradi
+//stikl vnutri tsikl
 
-console.log(1 && 2 && 3); // javob 3  xammasi true bolsa oxirgi truni qaytaradi
+// for (let i = 0; i < 3; i++) {
 
-console.log(!1 && 2 || !3); // false
+//     console.log(i);
 
-console.log(25 || null && !3); // true
-
-console.log(NaN || null || !3 || undefined || 5); // 5
-
-console.log(NaN || null && !3 && undefined || 5); // 5
-
-console.log(5 === 5 && 3 > 1 || 5); // true
-
-
-
-// const hamburger = 3;
-// const fries = 3;
-// const cola = 0;
-// const nuggets = 2;
-
-// if (hamburger === 3 && cola || fries === 3 && nuggets) {
-//    console.log('Done!');
+//     for (let j = 0; j < 3; j++) {
+//         console.log(j);
+//     }
 // }
 
 
-// let hamburger;
-// const fries = NaN;
-// const cola = 0;
-// const nuggets = 2;
+// *
+// **
+// ***
+// ****
+// *****
+// ******
 
-// if (hamburger || cola || fries === 3 || nuggets) {
-//     console.log('Done!');
+let result = '';
+const lsength = 9;
+
+for (let i = 1; i < lsength; i++) {
+    for (let j = 0; j < i; j++) {
+        result += "*";
+    }
+    result += "\n";
+}
+console.log(result);
+
+
+// metki
+
+
+// continue metkasi
+// first: for (let i = 0; i < 3; i++) {
+//     console.log(`first level: ${i}`);
+//     for (let j = 0; j < 3; j++) {
+//         console.log(`second level: ${j}`);
+//         for (let k = 0; k < 3; k++) {
+//             if (k === 2) continue first;
+//             console.log(`third level: ${k}`);
+//         }
+//     }
 // }
 
-// let hamburger;
-// const fries = NaN;
-// const cola = 0;
-// const nuggets = 2;
+// break metkasi 
 
-// if (hamburger && cola || fries === 3 && nuggets) {
-//    console.log('Done!');
-// }
+first: for (let i = 0; i < 3; i++) {
+    console.log(`first level: ${i}`);
+    for (let j = 0; j < 3; j++) {
+        console.log(`second level: ${j}`);
+        for (let k = 0; k < 3; k++) {
+            if (k === 2) break first;
+            console.log(`third level: ${k}`);
+        }
+    }
+}
