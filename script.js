@@ -1,12 +1,17 @@
 "use strict";
 
-const usdCurr = 28;
-const eurCurr = 32;
-
+const usdCurr = 10;
+const discount = 0.9;
 
 function convert(amount, curr) {
-    console.log(curr * amount);
+    return curr * amount;
 }
 
-convert(500, usdCurr);
-convert(500, eurCurr);
+
+function promotion(result) {
+    console.log(result * discount);
+}
+
+const res = convert(500, usdCurr);
+
+promotion(res);
