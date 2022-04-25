@@ -1,5 +1,6 @@
 'use strict';
 
+<<<<<<< HEAD
 //touchstart
 //touchmove
 //touchend
@@ -34,3 +35,23 @@ window.addEventListener('DOMContentLoaded', () => {
 // touches
 //targetTouches
 //changedTouches
+=======
+
+
+
+const p = document.querySelectorAll('p');
+
+console.log(p);
+
+
+
+function loadScript(src) {
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = false;
+    document.body.append(script); 
+}
+
+loadScript("js/test.js");
+loadScript("js/some.js");
+>>>>>>> 8189b89f220696aabcab4d55c0efe00197ff6267
