@@ -1,111 +1,41 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
+//touchstart
 
-    const movieDB = {
-        movies: [
-            "Логан",
-            "Лига справедливости",
-            "Ла-ла лэнд",
-            "Одержимость",
-            "Скотт Пилигрим против..."
-        ]
-    };
+//touchmove
 
-    const adv = document.querySelectorAll('.promo__adv img'),
-        poster = document.querySelector('.promo__bg'),
-        genre = poster.querySelector('.promo__genre'),
-        movieList = document.querySelector('.promo__interactive-list'),
-        addForm = document.querySelector('form.add'),
-        addInput = addForm.querySelector('.adding__input'),
-        checkbox = addForm.querySelector('[type="checkbox"]');
+//touchend
 
+//touchenter
 
-    addForm.addEventListener('submit', (event) => {
-        event.preventDefault();
+//touchleave
 
-        let newFilm = addInput.value;
-        const favorite = checkbox.checked;
+//touchcencel
 
+window.addEventListener('DOMContentLoaded', () => {
+    const box = document.querySelector('.box');
 
-        if (newFilm) {
-            if (newFilm.length > 21) {
-                newFilm = `${newFilm.substring(0, 22)}...`;
-            }
-
-            if (favorite) {
-                console.log('dobavlyaem lyubimy film');
-            }
-
-            movieDB.movies.push(newFilm);
-            sortArr(movieDB.movies);
-
-            createMovieList(movieDB.movies, movieList);
-        }
-
-        event.target.reset();
-
+    box.addEventListener('touchstart', (e) => {
+        console.log('start');
+        console.log(e.targetTouches);
     });
 
+    box.addEventListener('touchmove', (e) => {
+        console.log(e.changedTouches[0].pageX);
+    });
 
-
-
-
-
-    const deleteAdv = (arr) => {
-        arr.forEach(item => {
-            item.remove();
-        });
-    };
-
-
-
-
-    const makeChanges = () => {
-        genre.textContent = 'драма';
-
-        poster.style.backgroundImage = 'url("img/bg.jpg")';
-    };
-
-
-
-    const sortArr = (arr) => {
-        arr.sort();
-    };
-
-
-
-
-
-    function createMovieList(films, parent) {
-        parent.innerHTML = "";
-
-        sortArr(films);
-
-        films.forEach((film, i) => {
-            parent.innerHTML += `
-            <li class="promo__interactive-item">${i + 1} ${film}
-                <div class="delete"></div>
-            </li>
-        `;
-        });
-
-        document.querySelectorAll('.delete').forEach((btn, i) => {
-            btn.addEventListener('click', () => {
-                btn.parentElement.remove();
-                movieDB.movies.splice(i, 1);
-
-                createMovieList(films, parent);
-
-            });
-        });
-
-    }
-
-
-    deleteAdv(adv);
-    makeChanges();
-    createMovieList(movieDB.movies, movieList);
-
-
+    // box.addEventListener('touchend', (e) => {
+    //     console.log('end');
+    // });
 });
+
+//touches
+//targetTouches
+// changedTouches
+
+
+
+// Hummer js
+
+
+
