@@ -1,56 +1,65 @@
 'use strict';
 
-const birthday = Symbol('birthday');
+const btns = document.querySelectorAll('button'),
+    wrapper = document.querySelector('.btn-block');
+
+// console.log(btns[0].classList.length);
+// console.log(btns[0].classList.item(1));
+
+// console.log(btns[1].classList.add('red'));
+// console.log(btns[0].classList.remove('blue'));
+// console.log(btns[0].classList.toggle('blue'));
 
 
-const user = {
-    name: 'Alex',
-    surname: 'Smith',
-    [birthday]: '20/04/2021',
-    showMyPublicData: function() {
-        console.log(`${this.name} ${this.surname}`);
-    }
-};
-
-// Object.defineProperty(user, 'birthday', { value: prompt('Date?'), enumerable: true, configurable: true });
+// if (btns[1].classList.contains('red')) {
+//     console.log('red');
+// }
 
 
+btns[0].addEventListener('click', () => {
+    // if (!btns[1].classList.contains('red')) {
+    //     btns[1].classList.add('red');
+    // } else {
+    //     btns[1].classList.remove('red');
+    // }
 
-// console.log(Object.getOwnPropertyDescriptor(user, 'birthday'));
+    btns[1].classList.toggle('red');
 
-
-// console.log(Object.getOwnPropertyDescriptor(Math, 'PI'));
-
-
-Object.defineProperty(user, 'showMyPublicData', { enumerable: false });
-
-
-for (let key in user) {
-    console.log(key);
-}
-
-console.log(Object.getOwnPropertyDescriptor(user, 'PI'));
-
-
-Object.defineProperties(user, {
-    name: { writable: false },
-    surname: { writable: false }
 });
 
 
-
-// user.birthday = 'asdas';
-
-
-// Object.defineProperty(user, 'name', { writable: false });
+// console.log(btns[0].className);
 
 
-// Object.defineProperty(user, 'gender', { value: 'male' });
+// DELEGIROVANIYA SOBITIYA
 
-// console.log(Object.getOwnPropertyDescriptor(user, 'gender'));
+// wrapper.addEventListener('click', (event) => {
+//     if (event.target && event.target.tagName == "BUTTON") {
+//         console.log('Hello');
+//     }
+// });
 
-// user.name = 'ddsafs';
+wrapper.addEventListener('click', (event) => {
+    if (event.target && event.target.matches("button.red")) {
+        console.log('Hello');
+    }
+});
 
-//writable 
-//enumerable
-//configurable
+// wrapper.addEventListener('click', (event) => {
+//     if (event.target && event.target.classList.contains('blue')) {
+//         console.log('Hello');
+//     }
+// });
+
+
+// btns.forEach(btn => {
+//     btn.addEventListener('click', () => {
+//         console.log('Hello');
+//     });
+// });
+
+const btn = document.createElement('button');
+
+btn.classList.add('red');
+
+wrapper.append(btn);
