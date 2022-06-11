@@ -1,24 +1,20 @@
-const app = '123';
+window.addEventListener('DOMContentLoaded', function() {
 
-const number = 1;
+    const tabs = require('./modules/tabs'),
+        modal = require('./modules/modal'),
+        timer = require('./modules/timer'),
+        cards = require('./modules/cards'),
+        calc = require('./modules/calc'),
+        forms = require('./modules/forms'),
+        slider = require('./modules/slider');
 
-(function() {
-    let number = 2;
-    console.log(number);
-    console.log(number + 3);
-}());
 
-console.log(number);
+    tabs();
+    modal();
+    timer();
+    cards();
+    calc();
+    forms();
+    slider();
 
-const user = (function() {
-    const privat = function() {
-        console.log('I am privat!');
-    };
-
-    return {
-        sayHello: privat
-    };
-
-}());
-
-user.sayHello();
+});
