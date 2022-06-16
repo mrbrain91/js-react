@@ -1,23 +1,38 @@
-import $ from 'jquery';
-
-$(function() {
-    // first element of array
-    $('.list-item:first').on('mouseenter', function() {
-        $(this).toggleClass('active');
-    }).on('mouseleave', function() {
-        $(this).toggleClass('active');
-    });
-
-    $('.list-item:eq(2)').on('click', function() {
-        $('.image:even').fadeToggle('slow');
-    });
-
-    $('.list-item:eq(4)').on('click', function() {
-        $('.image:odd').animate({
-            opacity: 'toggle',
-            height: 'toggle'
-        }, 2000);
-    });
+const btn = document.querySelector('.btn'),
+    elem = document.querySelector('.box');
+let pos = 0;
 
 
-});
+// function myAnimation() {
+//     let pos = 0;
+
+//     const id = setInterval(frame, 10);
+
+//     function frame() {
+//         if (pos == 300) {
+//             clearInterval(id);
+//         } else {
+//             pos++;
+//             elem.style.top = pos + "px";
+//             elem.style.left = pos + 'px';
+//         }
+//     }
+// }
+
+
+function myAnimation() {
+
+    pos++;
+    elem.style.top = pos + "px";
+    elem.style.left = pos + 'px';
+
+    if (pos < 300) {
+        requestAnimationFrame(myAnimation);
+    }
+}
+
+
+btn.addEventListener('click', () => requestAnimationFrame(myAnimation));
+
+let id = requestAnimationFrame(myAnimation);
+cancelAnimationFrame(id);
