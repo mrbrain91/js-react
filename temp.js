@@ -1,12 +1,20 @@
-console.log(1);
+setTimeout(() => console.log('timeout'));
 
-setTimeout(() => {
-    console.log('timeout');
-}, 4000);
+Promise.resolve()
+    .then(() => console.log('propmise'));
+
+queueMicrotask(() => console.log('wow'));
+
+Promise.resolve()
+    .then(() => console.log('propmise_2'));
+
+console.log('code');
 
 
-setTimeout(() => {
-    console.log('timeout_4000');
-}, 4000);
-
-console.log(2);
+// () => {}
+// microtasks: then/cathc/finally/await
+//render
+// () => {}
+// microtasks: then/cathc/finally/await
+//render
+// () => {}
