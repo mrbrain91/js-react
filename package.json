@@ -1,0 +1,37 @@
+{
+    "name": "test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mrbrain91/js-react.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mrbrain91/js-react/issues"
+    },
+    "homepage": "https://github.com/mrbrain91/js-react#readme",
+    "browserslist": [
+        "> 1%"
+    ],
+    "devDependencies": {
+        "@babel/cli": "^7.17.10",
+        "@babel/core": "^7.18.5",
+        "@babel/preset-env": "^7.18.2",
+        "babel-loader": "^8.2.5",
+        "core-js": "^3.23.1",
+        "json-server": "^0.17.0",
+        "webpack-cli": "^4.9.2"
+    },
+    "dependencies": {
+        "@babel/polyfill": "^7.12.1",
+        "es6-promise": "^4.2.8",
+        "nodelist-foreach-polyfill": "^1.2.0",
+        "webpack": "^5.73.0"
+    }
+}
